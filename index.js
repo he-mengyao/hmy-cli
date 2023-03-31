@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
 // CommonJS (.cjs)
-const { Command } = require("commander");
+const { Command } = require("commander"); // 自定义指令
 const program = new Command();
-const download = require("download-git-repo");
-const handlebars = require("handlebars");
+const download = require("download-git-repo"); // 下载指定库
+const handlebars = require("handlebars"); // 语义模板库，实现与命令行进行数据交互
 const inquirer = require("inquirer");
-const fs = require("fs");
-const ora = require("ora");
-const chalk = require("chalk");
-const logSymbols = require("log-symbols");
+const fs = require("fs"); // 读取文件
+const ora = require("ora"); // 用于node的控制台进度美化,转轮
+const chalk = require("chalk"); // 用于控制台输出美化
+const logSymbols = require("log-symbols"); // 控制台输出美化
 
 const templates = {
   vue3: {
